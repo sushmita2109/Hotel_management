@@ -1,13 +1,16 @@
 import logo from "./logo.svg";
 import "./App.css";
-import NavBar from "./components/NavBar";
 import { Sigin } from "./components/Sigin";
+import { Routes, Route } from "react-router-dom";
+import { Dashboard } from "./components/Dashboard";
 
 function App() {
   return (
     <div className="App">
-      <NavBar />
-      <Sigin />
+      <Routes>
+        <Route path="/" element={<Sigin />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+      </Routes>
     </div>
   );
 }
